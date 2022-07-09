@@ -19,6 +19,7 @@ class CreatePaymentsTable extends Migration
             $table->string('transactionid')->nullable();
             $table->string('trackingid')->nullable();
             $table->string('status')->nullable();
+            $table->string('currency')->nullable();
             $table->string('amount')->nullable();
             $table->timestamps();
         });

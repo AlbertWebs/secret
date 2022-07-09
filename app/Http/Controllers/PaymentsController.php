@@ -6,15 +6,27 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Payment;
+use AmrShawky\LaravelCurrency\Facade\Currency;
 
 class PaymentsController extends Controller
 {
     public function payment(Request $request){//initiates payment
+        if($request->currency == "KES"){
+            $amount = $request -> amount;
+        }elseif($request->currency == "USD"){
+            $amount = Currency::convert()->from('USD')->to('KES')->amount($request -> amount)->get();
+        }elseif($request->currency == "GBP"){
+            $amount = Currency::convert()->from('GBP')->to('KES')->amount($request -> amount)->get();
+        }elseif($request->currency == "EUR"){
+            $amount = Currency::convert()->from('EUR')->to('KES')->amount($request -> amount)->get();
+        }
+
         $payments = new Payment;
         $payments -> businessid = 1; //Business ID
         $payments -> transactionid = Pesapal::random_reference();
         $payments -> status = 'NEW'; //if user gets to iframe then exits, i prefer to have that as a new/lost transaction, not pending
-        $payments -> amount = $request->amount;
+        $payments -> amount = (int)$amount;
+        $payments -> currency = $request->currency;
         $payments -> save();
 
         $details = array(
@@ -27,7 +39,7 @@ class PaymentsController extends Controller
             'phonenumber' => $request->mobile,
             'reference' => $payments -> transactionid,
             'height'=>'800px',
-            'currency' => $request->currency,
+            'currency' => 'KES'
         );
         // dd($details);
         $iframe=Pesapal::makePayment($details);

@@ -18,12 +18,12 @@ class ComposerStaticInit5267a659e1adf47ba48d072d104b64fd
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
@@ -186,6 +186,8 @@ class ComposerStaticInit5267a659e1adf47ba48d072d104b64fd
             'Asm89\\Stack\\' => 12,
             'Artesaos\\SEOTools\\' => 18,
             'App\\' => 4,
+            'AmrShawky\\LaravelCurrency\\' => 26,
+            'AmrShawky\\' => 10,
         ),
     );
 
@@ -529,6 +531,14 @@ class ComposerStaticInit5267a659e1adf47ba48d072d104b64fd
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'AmrShawky\\LaravelCurrency\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/amrshawky/laravel-currency/src',
+        ),
+        'AmrShawky\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/amrshawky/currency/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -542,6 +552,21 @@ class ComposerStaticInit5267a659e1adf47ba48d072d104b64fd
     );
 
     public static $classMap = array (
+        'AmrShawky\\API' => __DIR__ . '/..' . '/amrshawky/currency/src/API.php',
+        'AmrShawky\\Currency' => __DIR__ . '/..' . '/amrshawky/currency/src/Currency.php',
+        'AmrShawky\\CurrencyConversion' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyConversion.php',
+        'AmrShawky\\CurrencyFactory' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyFactory.php',
+        'AmrShawky\\CurrencyFluctuations' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyFluctuations.php',
+        'AmrShawky\\CurrencyHistoricalRates' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyHistoricalRates.php',
+        'AmrShawky\\CurrencyLatestRates' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyLatestRates.php',
+        'AmrShawky\\CurrencyRates' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyRates.php',
+        'AmrShawky\\CurrencyRatesProxy' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyRatesProxy.php',
+        'AmrShawky\\CurrencyTimeSeriesRates' => __DIR__ . '/..' . '/amrshawky/currency/src/CurrencyTimeSeriesRates.php',
+        'AmrShawky\\Exceptions\\RequestException' => __DIR__ . '/..' . '/amrshawky/currency/src/Exceptions/RequestException.php',
+        'AmrShawky\\LaravelCurrency\\CurrencyServiceProvider' => __DIR__ . '/..' . '/amrshawky/laravel-currency/src/CurrencyServiceProvider.php',
+        'AmrShawky\\LaravelCurrency\\Facade\\Currency' => __DIR__ . '/..' . '/amrshawky/laravel-currency/src/Facade/Currency.php',
+        'AmrShawky\\Traits\\HttpRequest' => __DIR__ . '/..' . '/amrshawky/currency/src/Traits/HttpRequest.php',
+        'AmrShawky\\Traits\\ParamsOverload' => __DIR__ . '/..' . '/amrshawky/currency/src/Traits/ParamsOverload.php',
         'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
         'App\\Answer' => __DIR__ . '/../..' . '/app/Answer.php',
         'App\\Banner' => __DIR__ . '/../..' . '/app/Banner.php',

@@ -1,16 +1,34 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'c671a3d9ee1fac39d1dd0ff5c24e1ba9f26d45d7',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'amrshawky/currency' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '39f13b6783ef611fd13916d48abd31bca2ab1e54',
+    ),
+    'amrshawky/laravel-currency' => 
+    array (
+      'pretty_version' => '5.0.0',
+      'version' => '5.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '34df93d1bc19758fe8bc2be63a0fc1580cb2b3bd',
+    ),
     'artesaos/seotools' => 
     array (
       'pretty_version' => 'v0.20.0',
@@ -458,12 +476,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'c671a3d9ee1fac39d1dd0ff5c24e1ba9f26d45d7',
     ),
     'laravel/sail' => 
     array (

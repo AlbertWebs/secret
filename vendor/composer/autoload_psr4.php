@@ -90,4 +90,6 @@ return array(
     'Asm89\\Stack\\' => array($vendorDir . '/asm89/stack-cors/src'),
     'Artesaos\\SEOTools\\' => array($vendorDir . '/artesaos/seotools/src/SEOTools'),
     'App\\' => array($baseDir . '/app'),
+    'AmrShawky\\LaravelCurrency\\' => array($vendorDir . '/amrshawky/laravel-currency/src'),
+    'AmrShawky\\' => array($vendorDir . '/amrshawky/currency/src'),
 );

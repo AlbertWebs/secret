@@ -6,6 +6,21 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AmrShawky\\API' => $vendorDir . '/amrshawky/currency/src/API.php',
+    'AmrShawky\\Currency' => $vendorDir . '/amrshawky/currency/src/Currency.php',
+    'AmrShawky\\CurrencyConversion' => $vendorDir . '/amrshawky/currency/src/CurrencyConversion.php',
+    'AmrShawky\\CurrencyFactory' => $vendorDir . '/amrshawky/currency/src/CurrencyFactory.php',
+    'AmrShawky\\CurrencyFluctuations' => $vendorDir . '/amrshawky/currency/src/CurrencyFluctuations.php',
+    'AmrShawky\\CurrencyHistoricalRates' => $vendorDir . '/amrshawky/currency/src/CurrencyHistoricalRates.php',
+    'AmrShawky\\CurrencyLatestRates' => $vendorDir . '/amrshawky/currency/src/CurrencyLatestRates.php',
+    'AmrShawky\\CurrencyRates' => $vendorDir . '/amrshawky/currency/src/CurrencyRates.php',
+    'AmrShawky\\CurrencyRatesProxy' => $vendorDir . '/amrshawky/currency/src/CurrencyRatesProxy.php',
+    'AmrShawky\\CurrencyTimeSeriesRates' => $vendorDir . '/amrshawky/currency/src/CurrencyTimeSeriesRates.php',
+    'AmrShawky\\Exceptions\\RequestException' => $vendorDir . '/amrshawky/currency/src/Exceptions/RequestException.php',
+    'AmrShawky\\LaravelCurrency\\CurrencyServiceProvider' => $vendorDir . '/amrshawky/laravel-currency/src/CurrencyServiceProvider.php',
+    'AmrShawky\\LaravelCurrency\\Facade\\Currency' => $vendorDir . '/amrshawky/laravel-currency/src/Facade/Currency.php',
+    'AmrShawky\\Traits\\HttpRequest' => $vendorDir . '/amrshawky/currency/src/Traits/HttpRequest.php',
+    'AmrShawky\\Traits\\ParamsOverload' => $vendorDir . '/amrshawky/currency/src/Traits/ParamsOverload.php',
     'App\\Admin' => $baseDir . '/app/Admin.php',
     'App\\Answer' => $baseDir . '/app/Answer.php',
     'App\\Banner' => $baseDir . '/app/Banner.php',
