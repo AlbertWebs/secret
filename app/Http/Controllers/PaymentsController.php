@@ -11,7 +11,7 @@ class PaymentsController extends Controller
 {
     public function payment(){//initiates payment
         $payments = new Payment;
-        $payments -> businessid = Auth::guard('business')->id(); //Business ID
+        $payments -> businessid = 1; //Business ID
         $payments -> transactionid = Pesapal::random_reference();
         $payments -> status = 'NEW'; //if user gets to iframe then exits, i prefer to have that as a new/lost transaction, not pending
         $payments -> amount = 10;
@@ -19,16 +19,17 @@ class PaymentsController extends Controller
 
         $details = array(
             'amount' => $payments -> amount,
-            'description' => 'Test Transaction',
+            'description' => 'Secret-Trek-Africa',
             'type' => 'MERCHANT',
-            'first_name' => 'Fname',
-            'last_name' => 'Lname',
-            'email' => 'test@test.com',
-            'phonenumber' => '254-723232323',
+            'first_name' => 'Albert',
+            'last_name' => 'Muhatia',
+            'email' => 'albert@designekta.com',
+            'phonenumber' => '254799071107',
             'reference' => $payments -> transactionid,
-            'height'=>'400px',
-            //'currency' => 'USD'
+            'height'=>'800px',
+            'currency' => 'KES'
         );
+        // dd($details);
         $iframe=Pesapal::makePayment($details);
 
         return view('payments.business.pesapal', compact('iframe'));
