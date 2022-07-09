@@ -13,9 +13,9 @@
         <div class="container margin_80_55" style="">
 
             <center>
-                <h1 class="text-success">Payment Success</h1>
-                <h2>Tracking ID</h2>:{{ Request::get('tracking_id') }}
-                <h2>Merchant Reference</h2>:{{ Request::get('merchant_reference') }}
+                <h1 class="text-success">Payment Success:<i class="ti-check"></i></h1>
+                <h2>Tracking ID:</h2>{{ Request::get('tracking_id') }}
+                <h2>Merchant Reference:</h2>{{ Request::get('merchant_reference') }}
             </center>
 
         </div>

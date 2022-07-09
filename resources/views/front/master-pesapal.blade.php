@@ -84,7 +84,7 @@
 
 	@yield('content')
 
-	@include('front.footer')
+	@include('front.footer-pesapal')
 	<!--/footer-->
 	</div>
 	<!-- page -->
