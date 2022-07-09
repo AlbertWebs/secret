@@ -98,7 +98,7 @@
                         <div class="clearfix"></div>
                         <div class="clearfix"></div>
                         <br>
-						<p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded" id="submit-plan"></p>
+						<p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded"></p>
 					</form>
 				</div>
 			</div>
