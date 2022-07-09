@@ -9,7 +9,7 @@
 
 
     <div class="bg_color_1">
-        <div class="container margin_80_55" style="">
+        <div class="container margin_80_55" style="min-height:550px;">
 
             <?php echo html_entity_decode($iframe); ?>
 

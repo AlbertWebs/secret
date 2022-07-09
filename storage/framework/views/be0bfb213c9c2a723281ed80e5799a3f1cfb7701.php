@@ -16,7 +16,7 @@
                     </div>
 					
 					<div class="alert-success" id="message-contact"></div>
-					<form method="post" action="<?php echo e(url('/make-payment')); ?>" id="planform" autocomplete="off">
+					<form method="post" action="<?php echo e(url('/make-payment')); ?>" autocomplete="off">
 						<input type="hidden" id="_token" name="_token" value="<?php echo e(csrf_token()); ?>">
 						<div class="row">
 							<div class="col-md-6">

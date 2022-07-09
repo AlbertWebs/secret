@@ -17,7 +17,7 @@
                     </div>
 					{{-- <p>Feel Free To Write To Us</p> --}}
 					<div class="alert-success" id="message-contact"></div>
-					<form method="post" action="{{url('/make-payment')}}" id="planform" autocomplete="off">
+					<form method="post" action="{{url('/make-payment')}}" autocomplete="off">
 						<input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
 						<div class="row">
 							<div class="col-md-6">

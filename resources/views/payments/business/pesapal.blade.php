@@ -10,7 +10,7 @@
 
 
     <div class="bg_color_1">
-        <div class="container margin_80_55" style="">
+        <div class="container margin_80_55" style="min-height:550px;">
 
             {!!html_entity_decode($iframe)!!}
 
