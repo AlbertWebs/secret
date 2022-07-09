@@ -2,12 +2,7 @@
 @section('content')
 <?php $SiteSettings = DB::table('sitesettings')->get(); ?>
 @foreach($SiteSettings as $Settings)
-<style>
-    iframe {
-    height: 550px;
-    width: 100%;
-}
-</style>
+
 <main>
 
 

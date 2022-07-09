@@ -1,12 +1,7 @@
 <?php $__env->startSection('content'); ?>
 <?php $SiteSettings = DB::table('sitesettings')->get(); ?>
 <?php $__currentLoopData = $SiteSettings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Settings): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<style>
-    iframe {
-    height: 550px;
-    width: 100%;
-}
-</style>
+
 <main>
 
 
@@ -90,7 +85,7 @@
                         <div class="clearfix"></div>
                         <div class="clearfix"></div>
                         <br>
-						<p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded" id="submit-plan"></p>
+						<p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded"></p>
 					</form>
 				</div>
 			</div>
