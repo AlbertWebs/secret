@@ -20,7 +20,7 @@
         </li>
         @endforeach
         <li><span><a href="{{url('/')}}/plan-my-safaris">Plan My Safari</a></span></li>
-        <li><span><a href="{{url('/')}}/make-payment">Pay Online</a></span></li>
+        <li><span><a href="{{url('/')}}/make-payment"><i class="ti-credit-card"></i> Pay Online</a></span></li>
         <li><span><a href="{{url('/')}}/about-us">About Us</a></span>
             <ul>
 

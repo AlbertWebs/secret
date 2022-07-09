@@ -20,7 +20,7 @@
         </li>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <li><span><a href="<?php echo e(url('/')); ?>/plan-my-safaris">Plan My Safari</a></span></li>
-        <li><span><a href="<?php echo e(url('/')); ?>/make-payment">Pay Online</a></span></li>
+        <li><span><a href="<?php echo e(url('/')); ?>/make-payment"><i class="ti-credit-card"></i> Pay Online</a></span></li>
         <li><span><a href="<?php echo e(url('/')); ?>/about-us">About Us</a></span>
             <ul>
 
