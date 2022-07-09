@@ -12,8 +12,9 @@
 
 
 	{{-- SEO --}}
-	{!! SEOMeta::generate() !!}
-	{{-- SEO --}}
+	<title>Make Payments - Secret Trek Africa Tours & Safaris</title>
+    <meta name="description" content="Secret Trek Africa is all about Mission Trips, Cultural Trips In Kenya,Special Interest Trips">
+    <link rel="canonical" href="http://secret-trekafrica.com/make-payment"/>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
