@@ -34,12 +34,23 @@
 						</div>
 
                         <div class="row">
-							<div class="col-md-12">
+							<div class="col-md-6">
 								<div class="form-group">
 									<label>Amount</label>
 									<input required class="form-control" type="number" id="name_contact" name="amount">
 								</div>
 							</div>
+                            <div class="col-md-6">
+								<div class="form-group">
+									<label>Currency*</label>
+                                    <select required class="form-control" id="country" name="currency" required>
+                                        <option selected value="KES">KES</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                    </select>
+								</div>
+                            </div>
 						</div>
                         <!-- /row -->
                         <div class="row">

@@ -27,7 +27,7 @@ class PaymentsController extends Controller
             'phonenumber' => $request->mobile,
             'reference' => $payments -> transactionid,
             'height'=>'800px',
-            'currency' => 'KES'
+            'currency' => $request->currency,
         );
         // dd($details);
         $iframe=Pesapal::makePayment($details);
