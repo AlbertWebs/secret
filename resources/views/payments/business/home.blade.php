@@ -12,7 +12,11 @@
     <div class="bg_color_1">
         <div class="container margin_80_55" style="">
 
-            {!!html_entity_decode($iframe)!!}
+            <center>
+                <h1 class="text-success">Payment Success</h1>
+                <h2>Tracking ID</h2>:{{ Request::get('tracking_id') }}
+                <h2>Merchant Reference</h2>:{{ Request::get('merchant_reference') }}
+            </center>
 
         </div>
         <!--/container-->
