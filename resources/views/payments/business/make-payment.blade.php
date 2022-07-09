@@ -13,7 +13,7 @@
 				<div class="col-lg-12">
                     <div class="main_title_2">
                         <span><em></em></span>
-                        <h2 class="bg-white text-center" style="color:#384820; font-weight:600">Make Your Payment</h2><br>
+                        <h2 class="bg-white text-center" style="color:#384820; font-weight:600">Pay Online</h2><br>
                     </div>
 					{{-- <p>Feel Free To Write To Us</p> --}}
 					<div class="alert-success" id="message-contact"></div>

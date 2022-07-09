@@ -1,5 +1,4 @@
- 
-<?php $__env->startSection('content'); ?> 
+<?php $__env->startSection('content'); ?>
 <?php $SiteSettings = DB::table('sitesettings')->get(); ?>
 <?php $__currentLoopData = $SiteSettings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Settings): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <style>
@@ -45,7 +44,7 @@
 }
 
 .checkbox-child{
-    
+
 }
 .span-kenya{
     visibility: hidden !important;
@@ -64,14 +63,14 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     <!--/hero_in-->
     <!--/hero_in-->
-    
+
     
     
     <div class="bg_color_1">
         <div class="container margin_80_55">
             <div class="main_title_2">
                 
-                
+
                 <p class="bg-white"><?php echo html_entity_decode($Settings->plan); ?></p>
             </div>
         </div>
@@ -84,7 +83,7 @@
 	<div class="bg_color_1">
 		<div class="container">
 			<div class="row justify-content-between">
-			
+
 				<div class="col-lg-12">
                     <div class="main_title_2">
                         <span><em></em></span>
@@ -304,12 +303,12 @@
                                         <option value="Romania">Romania</option>
                                         <option value="Russia">Russian Federation</option>
                                         <option value="Rwanda">Rwanda</option>
-                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
                                         <option value="Saint LUCIA">Saint LUCIA</option>
                                         <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
                                         <option value="Samoa">Samoa</option>
                                         <option value="San Marino">San Marino</option>
-                                        <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+                                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
                                         <option value="Saudi Arabia">Saudi Arabia</option>
                                         <option value="Senegal">Senegal</option>
                                         <option value="Seychelles">Seychelles</option>
@@ -377,7 +376,7 @@
                                                 <input required class="form-control" type="text" id="adult" name="adult">
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Children(Under 18)</label>
@@ -406,7 +405,7 @@
                                     <i class="icon_calendar"></i>
 								</div>
                             </div>
-                            
+
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Duration(Nights)</label>
@@ -422,27 +421,27 @@
                                     
 								</div>
                             </div>
-                            
+
 							<div class="col-md-3">
 								<div class="form-group selectBox" onclick="showCheckboxes()">
 									<label>Prefered Destinations</label>
 									<select class="form-control"  id="destination_kenya">
-                                        <option style="display:none;" id="selected" selected value="#0"></option>  
+                                        <option style="display:none;" id="selected" selected value="#0"></option>
                                     </select>
                                     <div class="overSelect"></div>
                                 </div>
                                 <div id="checkboxes">
-                                    
+
                                     <label>  <input onclick="selectDestination()" name="destination_kenya" class="checkbox-child" type="checkbox" id="kenya" /> &nbsp; Kenya </label>
                                     <br>
                                     <label>  <input  onclick="selectDestination()" name="destination_tanzania" class="checkbox-child" type="checkbox" id="tz" /> &nbsp; Tanzania</label>
-                                      
-                                      
+
+
                                 </div>
-                                
+
                             </div>
 
-                            
+
                             <div class="col-md-3">
 								<div class="form-group">
 									<label></label>
@@ -465,12 +464,12 @@
 						<?php
 						$ops = array('-', '+');
 						$answer = -1;
-					
+
 						$num1 = rand(0, 15);
 						$num2 = rand(0, 15);
 
 						$answer = $num1 + $num2;
-						
+
 						?>
                         <input type="hidden" name="correct_answer" id="correct_answer" value="<?php echo e($answer); ?>">
                         <input required class="form-control" value="<?php echo e($answer); ?>" type="hidden" id="verify_contact" name="verify_contact">
