@@ -10,7 +10,7 @@
 
 
     <div class="bg_color_1">
-        <div class="container margin_80_55" style="min-height:500px">
+        <div class="container margin_80_55" style="min-height:550px">
 
             <center>
                 <h1 class="text-success">Payment Success:<i class="ti-check"></i></h1>
