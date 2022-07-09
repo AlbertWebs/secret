@@ -1,7 +1,12 @@
 <?php $__env->startSection('content'); ?>
 <?php $SiteSettings = DB::table('sitesettings')->get(); ?>
 <?php $__currentLoopData = $SiteSettings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Settings): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
+<style>
+    iframe {
+    height: 550px;
+    width: 100%;
+}
+</style>
 <main>
 
 
