@@ -609,7 +609,8 @@ Route::get('/facebook/redirect', 'Auth\LoginController@facebookRedirect');
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 Route::get('/callback', 'SocialAuthFacebookController@callback');
 
-Route::get('/make-payment','PaymentsController@payment');
+Route::get('/make-payment','PaymentsController@make_payment');
+Route::post('/make-payment','PaymentsController@payment');
 Route::group(['prefix' => '/webhooks'], function () {
     //PESAPAL
     Route::get('donepayment', ['as' => 'paymentsuccess', 'uses'=>'PaymentsController@paymentsuccess']);

@@ -1,7 +1,7 @@
-@extends('front.master-experience')
-@section('content')
+ 
+<?php $__env->startSection('content'); ?> 
 <?php $SiteSettings = DB::table('sitesettings')->get(); ?>
-@foreach($SiteSettings as $Settings)
+<?php $__currentLoopData = $SiteSettings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Settings): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <style>
 
 .multiselect {
@@ -45,7 +45,7 @@
 }
 
 .checkbox-child{
-
+    
 }
 .span-kenya{
     visibility: hidden !important;
@@ -53,47 +53,47 @@
 </style>
 <main>
     <?php $Banners = DB::table('banners')->where('section','plan')->get();  ?>
-    @foreach ($Banners as $About)
-    <section class="hero_in general" style="background: url('{{url('/')}}/uploads/banners/{{$About->image}}') center center no-repeat;">
+    <?php $__currentLoopData = $Banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $About): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <section class="hero_in general" style="background: url('<?php echo e(url('/')); ?>/uploads/banners/<?php echo e($About->image); ?>') center center no-repeat;">
         <div class="wrapper opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.7)">
             <div class="container">
                 <h1 class="fadeInUp"><span></span>Plan My Safari</h1>
             </div>
         </div>
     </section>
-    @endforeach
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     <!--/hero_in-->
     <!--/hero_in-->
-
-    {{--  --}}
-    {{-- Text Area --}}
+    
+    
+    
     <div class="bg_color_1">
         <div class="container margin_80_55">
             <div class="main_title_2">
-                {{-- <span><em></em></span> --}}
-
-                <p class="bg-white">{!!html_entity_decode($Settings->plan)!!}</p>
+                
+                
+                <p class="bg-white"><?php echo html_entity_decode($Settings->plan); ?></p>
             </div>
         </div>
     </div>
-    {{--  </TextArea>--}}
-    {{--  --}}
+    
+    
 
 
 
 	<div class="bg_color_1">
 		<div class="container">
 			<div class="row justify-content-between">
-
+			
 				<div class="col-lg-12">
                     <div class="main_title_2">
                         <span><em></em></span>
                         <h2 class="bg-white text-center" style="color:#384820; font-weight:600">Plan My Safari</h2><br>
                     </div>
-					{{-- <p>Feel Free To Write To Us</p> --}}
+					
 					<div class="alert-success" id="message-contact"></div>
-					<form method="post" action="{{url('/submitPlan')}}" id="planform" autocomplete="off">
-						<input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
+					<form method="post" action="<?php echo e(url('/submitPlan')); ?>" id="planform" autocomplete="off">
+						<input type="hidden" id="_token" name="_token" value="<?php echo e(csrf_token()); ?>">
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group">
@@ -122,7 +122,7 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Country Of Origin</label>
-                                    {{-- <input required class="form-control" type="email" id="email_contact" name="email_contact"> --}}
+                                    
                                     <select required class="form-control" id="country" name="country">
                                         <option selected value="#0">Select Country</option>
                                         <option value="Afghanistan">Afghanistan</option>
@@ -304,12 +304,12 @@
                                         <option value="Romania">Romania</option>
                                         <option value="Russia">Russian Federation</option>
                                         <option value="Rwanda">Rwanda</option>
-                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
                                         <option value="Saint LUCIA">Saint LUCIA</option>
                                         <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
                                         <option value="Samoa">Samoa</option>
                                         <option value="San Marino">San Marino</option>
-                                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                        <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
                                         <option value="Saudi Arabia">Saudi Arabia</option>
                                         <option value="Senegal">Senegal</option>
                                         <option value="Seychelles">Seychelles</option>
@@ -369,7 +369,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    {{--  --}}
+                                    
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -377,7 +377,7 @@
                                                 <input required class="form-control" type="text" id="adult" name="adult">
                                             </div>
                                         </div>
-
+                                        
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Children(Under 18)</label>
@@ -392,7 +392,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{--  --}}
+                                    
 								</div>
 							</div>
                         </div>
@@ -406,7 +406,7 @@
                                     <i class="icon_calendar"></i>
 								</div>
                             </div>
-
+                            
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Duration(Nights)</label>
@@ -419,44 +419,30 @@
 								<div class="form-group">
 									<label>Estimated Budget(USD)</label>
                                     <input required class="form-control" type="text" id="budget" name="budget">
-                                    {{-- <i class="icon_calendar"></i> --}}
+                                    
 								</div>
                             </div>
-
+                            
 							<div class="col-md-3">
 								<div class="form-group selectBox" onclick="showCheckboxes()">
 									<label>Prefered Destinations</label>
 									<select class="form-control"  id="destination_kenya">
-                                        <option style="display:none;" id="selected" selected value="#0"></option>
+                                        <option style="display:none;" id="selected" selected value="#0"></option>  
                                     </select>
                                     <div class="overSelect"></div>
                                 </div>
                                 <div id="checkboxes">
-
+                                    
                                     <label>  <input onclick="selectDestination()" name="destination_kenya" class="checkbox-child" type="checkbox" id="kenya" /> &nbsp; Kenya </label>
                                     <br>
                                     <label>  <input  onclick="selectDestination()" name="destination_tanzania" class="checkbox-child" type="checkbox" id="tz" /> &nbsp; Tanzania</label>
-
-
+                                      
+                                      
                                 </div>
-
+                                
                             </div>
-{{--
-                            <div class="col-md-3">
-								<div class="form-group">
-									<label>Prefered Destinations(Kenya)</label>
-									<select class="form-control" name="destination_kenya" id="destination_kenya">
-                                        <option selected value="#0"></option>
-                                        <?php $Country = DB::table('destinations')->where('country','1')->get(); ?>
-                                        @foreach ($Country as $country)
-                                           <option value="{{$country->title}}">{{$country->title}}</option>
-                                        @endforeach
-                                    </select>
 
-
-								</div>
-                            </div> --}}
-
+                            
                             <div class="col-md-3">
 								<div class="form-group">
 									<label></label>
@@ -479,23 +465,16 @@
 						<?php
 						$ops = array('-', '+');
 						$answer = -1;
-
+					
 						$num1 = rand(0, 15);
 						$num2 = rand(0, 15);
 
 						$answer = $num1 + $num2;
-
+						
 						?>
-                        <input type="hidden" name="correct_answer" id="correct_answer" value="{{$answer}}">
-                        <input required class="form-control" value="{{$answer}}" type="hidden" id="verify_contact" name="verify_contact">
-						{{-- <div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Are you human? {{$num1}} + {{$num2}} =</label>
-									<input required class="form-control" value="{{$answer}}" type="text" id="verify_contact" name="verify_contact">
-								</div>
-							</div>
-                        </div> --}}
+                        <input type="hidden" name="correct_answer" id="correct_answer" value="<?php echo e($answer); ?>">
+                        <input required class="form-control" value="<?php echo e($answer); ?>" type="hidden" id="verify_contact" name="verify_contact">
+						
                         <div class="clearfix"></div>
                         <br>
                         <div class="col-lg-12 col-md-12" id="TheCapcha">
@@ -568,5 +547,7 @@ function selectDestination() {
 }
 </script>
 
-@endforeach
-@endsection
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('front.master-experience', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/designekta/secret/resources/views/front/plan_my_safaris.blade.php ENDPATH**/ ?>

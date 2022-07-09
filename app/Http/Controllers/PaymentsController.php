@@ -9,22 +9,22 @@ use App\Models\Payment;
 
 class PaymentsController extends Controller
 {
-    public function payment(){//initiates payment
+    public function payment(Request $request){//initiates payment
         $payments = new Payment;
         $payments -> businessid = 1; //Business ID
         $payments -> transactionid = Pesapal::random_reference();
         $payments -> status = 'NEW'; //if user gets to iframe then exits, i prefer to have that as a new/lost transaction, not pending
-        $payments -> amount = 10;
+        $payments -> amount = $request->amount;
         $payments -> save();
 
         $details = array(
             'amount' => $payments -> amount,
-            'description' => 'Secret-Trek-Africa',
+            'description' => 'Secret-Trek-Africa'.$request->first_name,
             'type' => 'MERCHANT',
-            'first_name' => 'Albert',
-            'last_name' => 'Muhatia',
-            'email' => 'albert@designekta.com',
-            'phonenumber' => '254799071107',
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'phonenumber' => $request->mobile,
             'reference' => $payments -> transactionid,
             'height'=>'800px',
             'currency' => 'KES'
@@ -66,5 +66,11 @@ class PaymentsController extends Controller
         $payments -> payment_method = "PESAPAL";//use the actual method though...
         $payments -> save();
         return "success";
+    }
+
+
+    public function make_payment(){
+        $page_title = 'We will be Back Soon';
+        return view('payments.business.make-payment',compact('page_title'));
     }
 }
